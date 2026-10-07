@@ -2,6 +2,8 @@
 
 **An on-device handwritten math calculator.** Write an arithmetic expression by hand with a mouse, stylus or finger. When you finish it with **=**, CalcInk reads your handwriting with a neural network that runs in your browser and writes the answer next to your equals sign. Erase or rewrite any number and the answer updates straight away.
 
+**Live demo:** https://calcink-iitg-rj.netlify.app
+
 - **100% client-side.** Stroke capture, preprocessing, neural-network inference and evaluation all run in the browser. Nothing is uploaded.
 - **Works offline.** After the first visit, a service worker has cached the whole app, including the WASM runtime and the model, so it works in airplane mode.
 - **60 FPS ink.** All recognition runs in a Web Worker, so drawing never waits on the model.
