@@ -15,7 +15,8 @@ export default defineConfig({
     // The ORT WASM binary is ~14 MB; it's loaded lazily by the worker, not on the critical path.
     chunkSizeWarningLimit: 1000,
   },
-  server: { port: 5173, host: true },
+  // 5280 avoids clashing with other Vite apps on the default 5173.
+  server: { port: 5280, strictPort: false, host: true },
   preview: { port: 4173, host: true },
   plugins: [
     VitePWA({

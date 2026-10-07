@@ -21,7 +21,7 @@ Requires **Node.js ≥ 20.19** (Node 22 LTS recommended).
 
 ```bash
 npm install
-npm run dev          # → http://localhost:5173
+npm run dev          # → http://localhost:5280
 ```
 
 Production build (this also turns on the offline service worker):
