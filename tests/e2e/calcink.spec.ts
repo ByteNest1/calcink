@@ -1,5 +1,5 @@
 import { expect, test } from '@playwright/test';
-import { drawPaths, expectAnswer, lines, ready, write } from './helpers';
+import { drawPaths, expectAnswer, ready, write } from './helpers';
 import { synthesize, rng } from '../fixtures/handwriting';
 
 test.describe('CalcInk', () => {
@@ -11,7 +11,7 @@ test.describe('CalcInk', () => {
     await expect(page.locator('#status')).toHaveAttribute('data-state', 'ready');
     await expect(page.locator('#hint')).toBeVisible();
     // Three DPR-scaled canvas layers.
-    const sizes = await page.$$eval('#paper canvas', (cs) => cs.map((c) => [c.width, c.clientWidth]));
+    const sizes = await page.$$eval('#paper canvas', (cs) => (cs as HTMLCanvasElement[]).map((c) => [c.width, c.clientWidth]));
     expect(sizes).toHaveLength(3);
     for (const [w, cw] of sizes) expect(w).toBe(cw! * 2);
   });
