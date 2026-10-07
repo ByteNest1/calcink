@@ -1,0 +1,107 @@
+{
+  "style": "hard",
+  "realMnistSkeletonAccuracy": 0.9628,
+  "samplesPerGlyph": 150,
+  "glyphs": [
+    {
+      "glyph": "0",
+      "accuracy": 1,
+      "samples": 150,
+      "confusions": ""
+    },
+    {
+      "glyph": "1",
+      "accuracy": 0.98,
+      "samples": 150,
+      "confusions": "7×2 ÷×1"
+    },
+    {
+      "glyph": "2",
+      "accuracy": 1,
+      "samples": 150,
+      "confusions": ""
+    },
+    {
+      "glyph": "3",
+      "accuracy": 1,
+      "samples": 150,
+      "confusions": ""
+    },
+    {
+      "glyph": "4",
+      "accuracy": 1,
+      "samples": 150,
+      "confusions": ""
+    },
+    {
+      "glyph": "5",
+      "accuracy": 1,
+      "samples": 150,
+      "confusions": ""
+    },
+    {
+      "glyph": "6",
+      "accuracy": 1,
+      "samples": 150,
+      "confusions": ""
+    },
+    {
+      "glyph": "7",
+      "accuracy": 1,
+      "samples": 150,
+      "confusions": ""
+    },
+    {
+      "glyph": "8",
+      "accuracy": 1,
+      "samples": 150,
+      "confusions": ""
+    },
+    {
+      "glyph": "9",
+      "accuracy": 1,
+      "samples": 150,
+      "confusions": ""
+    },
+    {
+      "glyph": "+",
+      "accuracy": 1,
+      "samples": 150,
+      "confusions": ""
+    },
+    {
+      "glyph": "−",
+      "accuracy": 1,
+      "samples": 150,
+      "confusions": ""
+    },
+    {
+      "glyph": "×",
+      "accuracy": 1,
+      "samples": 150,
+      "confusions": ""
+    },
+    {
+      "glyph": "÷",
+      "accuracy": 1,
+      "samples": 150,
+      "confusions": ""
+    },
+    {
+      "glyph": "=",
+      "accuracy": 1,
+      "samples": 150,
+      "confusions": ""
+    },
+    {
+      "glyph": ".",
+      "accuracy": 0.9933333333333333,
+      "samples": 150,
+      "confusions": "|.×1"
+    }
+  ],
+  "meanGlyphAccuracy": 0.9983333333333334,
+  "expressionAccuracy": 0.9666666666666667,
+  "expressions": 300,
+  "meanLatencyMs": 1.5087725433333246
+}
