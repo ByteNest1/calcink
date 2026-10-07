@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no" />
+    <title>CalcInk — Handwritten Math, On-Device</title>
+    <meta name="description" content="Write math by hand. CalcInk reads it with an on-device neural network and writes the answer next to your equals sign — fully offline." />
+    <meta name="theme-color" content="#f7f3ea" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#1c211f" media="(prefers-color-scheme: dark)" />
+    <link rel="icon" href="./icons/icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="./icons/icon-192.png" />
+  </head>
+  <body>
+    <div id="app" class="app">
+      <header class="topbar">
+        <div class="brand">
+          <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><path d="M6 21c3-8 6-12 9-12s1 7-2 10 7-9 10-9-2 8 1 8 3-2 3-2" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <div>
+            <h1>CalcInk</h1>
+            <p>handwritten math · on-device</p>
+          </div>
+        </div>
+        <div class="status" id="status" role="status" aria-live="polite">
+          <span class="status-dot"></span><span class="status-text">Loading model…</span>
+        </div>
+      </header>
+
+      <main id="paper" class="paper" aria-describedby="hint"></main>
+
+      <section id="hint" class="hint">
+        <p class="hint-example" aria-hidden="true">18 + 4 × 3 =</p>
+        <p class="hint-title">Write an equation ending with <b>=</b></p>
+        <p class="hint-sub">Digits, + − × ÷, decimals. Scribble over ink to erase it. Write your own answer to have it checked.</p>
+      </section>
+
+      <nav class="toolbar" id="toolbar" role="toolbar" aria-label="Drawing tools"></nav>
+
+      <div id="hovercard" class="hovercard" role="tooltip" hidden></div>
+      <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+      <aside id="perf" class="perf" hidden aria-label="Performance monitor"></aside>
+
+      <dialog id="help" class="help">
+        <form method="dialog">
+          <h2>CalcInk</h2>
+          <p>Write an arithmetic expression ending in <b>=</b>. The answer appears beside it and updates live as you edit.</p>
+          <ul class="help-list">
+            <li><b>Vocabulary</b> — digits 0–9, <b>+ − × ÷</b> (or a slanted /, or a raised dot ·), decimal point, =</li>
+            <li><b>Check mode</b> — write your own answer after = and get a ✓ or ✗</li>
+            <li><b>Scratch-out</b> — scribble back and forth over ink to delete it</li>
+            <li><b>Insight</b> — the eye button shows what the recogniser sees, with per-symbol confidence</li>
+            <li><b>Private</b> — recognition runs in your browser; nothing is uploaded. Works offline after the first visit.</li>
+          </ul>
+          <h3>Shortcuts</h3>
+          <table class="keys">
+            <tr><td><kbd>P</kbd></td><td>Pen</td><td><kbd>E</kbd></td><td>Stroke eraser</td></tr>
+            <tr><td><kbd>X</kbd></td><td>Pixel eraser</td><td><kbd>[</kbd> <kbd>]</kbd></td><td>Size</td></tr>
+            <tr><td><kbd>Ctrl</kbd>+<kbd>Z</kbd></td><td>Undo</td><td><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>Z</kbd></td><td>Redo</td></tr>
+            <tr><td><kbd>I</kbd></td><td>Insight view</td><td><kbd>F</kbd></td><td>Performance HUD</td></tr>
+            <tr><td><kbd>Shift</kbd>+<kbd>Del</kbd></td><td>Clear page</td><td><kbd>?</kbd></td><td>This help</td></tr>
+          </table>
+          <button class="help-close" value="close">Got it</button>
+        </form>
+      </dialog>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
