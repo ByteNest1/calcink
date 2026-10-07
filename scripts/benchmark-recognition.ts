@@ -128,10 +128,10 @@ async function main(): Promise<void> {
 
   if (process.argv.includes('--json')) {
     writeFileSync(
-      `${root}docs/benchmark.json`,
+      `${root}docs/benchmark${process.env.STYLE === 'hard' ? '-hard' : ''}.json`,
       JSON.stringify({ style: process.env.STYLE ?? 'normal', realMnistSkeletonAccuracy: realAcc, samplesPerGlyph: SAMPLES, glyphs: rows, meanGlyphAccuracy: glyphAcc, expressionAccuracy: exprOk / exprN, expressions: exprN, meanLatencyMs: totalMs / exprN }, null, 2) + '\n',
     );
-    console.log('\n  wrote docs/benchmark.json');
+    console.log('\n  wrote docs/benchmark JSON');
   }
 }
 
