@@ -681,6 +681,18 @@ kbd {
   .brand p {
     display: none;
   }
+  .toolbar {
+    flex-wrap: wrap;
+    justify-content: center;
+    width: calc(100vw - 20px);
+    row-gap: 2px;
+  }
+  .tb-sep {
+    display: none;
+  }
+  .toast {
+    bottom: calc(max(18px, env(safe-area-inset-bottom)) + 110px);
+  }
   .status {
     font-size: 11px;
   }
